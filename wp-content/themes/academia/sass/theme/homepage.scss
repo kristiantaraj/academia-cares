@@ -1,0 +1,133 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $black;
+    width: 100%;
+}
+
+.navbar {
+    display: none; 
+}
+
+#banner {
+
+    .banner-image {
+        height: 448px;
+        width: 100%;
+        
+
+        .shade {
+            height: 448px;
+            background-color: rgba(0, 0, 0, 0.37);
+        }
+        h2 {
+            text-align: center;
+            padding-top: 123px;
+            color: $white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 20px;
+            color: $white;
+            text-align: center;
+            margin-top: 22px;
+        }
+    }
+}
+
+#slogan {
+
+    .redirect{
+        text-align: center;
+        padding-top: 44px;
+
+        h2 {
+            color: $white;
+            font-size: 36px;
+        
+        }
+
+        .text {
+            color: $light-gray;
+            font-size: 24px;
+            margin-top: 26px;
+            font-weight: -200;
+
+            .bold {
+                font-weight: bold;
+                color: $white;
+            }
+        }
+
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 241px;
+            margin-top: 24px;
+
+            .button {
+                background-color: $primary;
+                color: $white;
+                padding: 15px 40px;
+                font-size: 24px;
+                border-radius: 10px;
+                font-weight: bold;
+            }
+        }
+
+
+
+        .date {
+            color: $gray;
+            font-size: 16px;
+            margin-top: 16px;
+        }
+        
+    }
+}
+
+#description {
+    margin-top: 93px;
+    
+    .video {
+        
+        iframe {
+            width: 631px;
+            height: 382px;
+        }
+    }
+
+    .content {
+
+        p{
+            color: $white;
+            font-size: 22px;
+        }
+    }
+
+    .info {
+        margin-top: 86px;
+
+        p {
+            color: $white;
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+}
+
+#cards {
+    margin-top: 56px;
+    .content {
+        
+        h2 {
+            color: $white;
+            text-align: center;
+            font-size: 34px;
+        }
+    }
+}
