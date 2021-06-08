@@ -26,6 +26,7 @@ if (($_FILES['my_file']['name']!="")){
 
     $allowed = array("application/x-zip-compressed", "application/octet-stream");
 
+    
    
   // Check if file already exists
   if (file_exists($path_filename_ext)) {
