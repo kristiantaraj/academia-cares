@@ -22,7 +22,7 @@ if (($_FILES['my_file']['name']!="")){
       $path_filename_ext = $target_dir.$filename.".".$ext;
       $file_size = $_FILES['my_file']['size'];
       $file_type = $_FILES['my_file']['type'];
-      $maxsize = 157;
+      $maxsize = 157286400;
 
     $allowed = array("application/x-zip-compressed", "application/octet-stream");
 
