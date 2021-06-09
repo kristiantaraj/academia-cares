@@ -34,8 +34,6 @@ if (($_FILES['my_file']['name']!="")){
 
     }else if ($file_size > $maxsize || $file_size == 0){      
         echo '<script type="text/javascript">
-
-        alert("YESSSS");
         
         $(".tooLarge-yes").addClass("hide");
         $(".tooLarge-no").removeClass("hide");
