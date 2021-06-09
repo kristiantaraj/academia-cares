@@ -13,16 +13,16 @@ error_reporting(0);
       
 if (($_FILES['my_file']['name']!="")){
   // Where the file is going to be stored
-      $target_dir = "wp-content/themes/academia/zip/caresfile ";
+      $target_dir = "wp-content/zip/caresfile ";
       $file = $_FILES['my_file']['name'];
       $path = pathinfo($file);
       $filename = $path['filename'];
       $ext = $path['extension'];
-      $temp_name = $_FILES['my_file']['tmp_name'];
+      $temp_name = $_FILES['my_file']['name'];
       $path_filename_ext = $target_dir.$filename.".".$ext;
       $file_size = $_FILES['my_file']['size'];
       $file_type = $_FILES['my_file']['type'];
-      $maxsize = 157286400;
+      $maxsize = 157;
 
     $allowed = array("application/x-zip-compressed", "application/octet-stream");
 
@@ -31,11 +31,29 @@ if (($_FILES['my_file']['name']!="")){
   if (file_exists($path_filename_ext)) {
 
    }else if(!in_array($file_type, $allowed)) {
-      echo "not allowed";
+
     }else if ($file_size > $maxsize || $file_size == 0){      
-        $message = 'File too large. File must be less than 2 megabytes.'; 
+        echo '<script type="text/javascript">
+
+        alert("YESSSS");
+        
+        $(".tooLarge-yes").addClass("hide");
+        $(".tooLarge-no").removeClass("hide");
+
+        
+        </script>'; 
     }else{
    move_uploaded_file($temp_name,$path_filename_ext);
+   echo '<script type="text/javascript">
+        
+   $(".tooLarge-no").addClass("hide");
+   $(".tooLarge-yes").removeClass("hide");
+
+   $(".correct-no").addClass("hide");
+   $(".correct-yes").removeClass("hide");
+
+   
+   </script>'; 
    }
   }
 
@@ -713,7 +731,7 @@ window._load_script = function(url, callback) {
         <div class="col-md-12 d-flex justify-content-center">
             <div class="checkbox">
                 <div class="row">
-                    <div class="col-md-1"><input type="checkbox" class="checkbox-style"></div>
+                    <div class="col-md-1"><input id="checkbox" type="checkbox" class="checkbox-style"></div>
                     <div class="col-md-11"><p>Informativa trattamento dei dati personali Ai sensi dell'art. 6 del Reg. 
                 EU/2016/679 esprimo il consenso al trattamento dei dati conferiti</p></div>
                 </div>
@@ -732,75 +750,68 @@ window._load_script = function(url, callback) {
     </div>
   </div>
 </section>
-<!-- <section id="errors">
+<section id="errors" class="hide">
    <div class="container justify-content-center">
-       <div class="row">
-           <div class="col-md-8"></div>
-           <div class="col-md-4">
-           <div class="graybox details">
-
-          <div class="row">
-                <div class="col-sm-2">
-            <img class="cross" src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
-            <img class="check" src="<?php echo get_template_directory_uri().'/assets/check.png'; ?>" alt="">
-            
-                </div>
-                <div class="col-sm-10">
-                <p>Non hai inserito tutti i dati richiesti! <br>
-                Verifica di averli inseriti correttamente.</p>
+   <div class="row">
+        <div class="col-md-8"></div>
+        <div class="col-md-4">
+            <div class="graybox">
+                <div class="row">
+                    <div class="image-col col-2">
+                        <img class="cross checkbox-no" src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
+                        <img class="check checkbox-yes hide" src="<?php echo get_template_directory_uri().'/assets/check.png'; ?>" alt="">
+                    </div>
+                    <div class="col-10">
+                    <p>Spunta la checkbox per poter proseguire!.</p>
+                    </div>
                 </div>
             </div>
-           </div>
-       </div>
-       <div class="row">
-           <div class="col-md-4">
-           <div class="graybox details">
-          <div class="row">
-                <div class="col-sm-2">
-            <img class="cross" src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
-            <img class="check" src="<?php echo get_template_directory_uri().'/assets/check.png'; ?>" alt="">
-            
-                </div>
-                <div class="col-sm-10">
-                <p>Non hai inserito tutti i dati richiesti! <br>
-                Verifica di averli inseriti correttamente.</p>
-                </div>
-            </div>
-       </div>
-           </div>
-           <div class="col-md-4">
-           <div class="graybox details">
-          <div class="row">
-                <div class="col-sm-2">
-            <img class="cross" src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
-            <img class="check" src="<?php echo get_template_directory_uri().'/assets/check.png'; ?>" alt="">
-            
-                </div>
-                <div class="col-sm-10">
-                <p>Non hai inserito tutti i dati richiesti! <br>
-                Verifica di averli inseriti correttamente.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+                <div class="graybox details">
+                    <div class="row">
+                        <div class="image-col col-2">
+                            <img class="cross details-yes " src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
+                            <img class="check details-no hide" src="<?php echo get_template_directory_uri().'/assets/check.png'; ?>" alt="">
+                        </div>
+                        <div class="col-10">
+                        <p>Non hai inserito tutti i dati richiesti!
+                    Verifica di averli inseriti correttamente</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-       </div>
-           </div>
-           <div class="col-md-4">
-           <div class="graybox details">
-          <div class="row">
-                <div class="col-sm-2">
-            <img class="cross" src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
-            <img class="check" src="<?php echo get_template_directory_uri().'/assets/check.png'; ?>" alt="">
-            
-                </div>
-                <div class="col-sm-10">
-                <p>Non hai inserito tutti i dati richiesti! <br>
-                Verifica di averli inseriti correttamente.</p>
+            <div class="col-md-4">
+                <div class="graybox details">
+                    <div class="row">
+                        <div class="image-col col-2">
+                            <img class="cross correct-yes" src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
+                            <img class="check hide correct-yes" src="<?php echo get_template_directory_uri().'/assets/check.png'; ?>" alt="">
+                        </div>
+                        <div class="col-10">
+                        <p>Hai caricato correttamente i tuoi file! Sarai contattato al più presto dal nostro team!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-       </div>
-           </div>
-       </div>
-   </div>
-</section> -->
+            <div class="col-md-4">
+                <div class="graybox details">
+                    <div class="row">
+                        <div class="image-col col-2">
+                            <img class="cross tooLarge-yes" src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
+                            <img class="check tooLarge-no hide" src="<?php echo get_template_directory_uri().'/assets/check.png'; ?>" alt="">
+                        </div>
+                        <div class="col-10">
+                        <p>La cartella che vuoi caricare supera i 150 mb. Prova a ridurre la dimensione!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section id="sponsors">
     <div class="container">
