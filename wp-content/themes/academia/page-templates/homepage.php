@@ -729,8 +729,8 @@ window._load_script = function(url, callback) {
         <div class="col-md-12 d-flex justify-content-center">
             <div class="checkbox">
                 <div class="row">
-                    <div class="col-md-1"><input id="checkbox" type="checkbox" class="checkbox-style"></div>
-                    <div class="col-md-11"><p>Informativa trattamento dei dati personali Ai sensi dell'art. 6 del Reg. 
+                    <div class="col-2"><input id="checkbox" type="checkbox" class="checkbox-style"></div>
+                    <div class="col-10"><p>Informativa trattamento dei dati personali Ai sensi dell'art. 6 del Reg. 
                 EU/2016/679 esprimo il consenso al trattamento dei dati conferiti</p></div>
                 </div>
             </div>
