@@ -115,7 +115,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
             <div class="col-md-5">
                 <div class="content">
-                <p>Acadèmia supporta il CARE’s Young ethical Chef Award by Monograno Felicetti, il nuovo premio istituito da Acadèmia e CARE’s - The ethical Chef Days. L’ evento è stato creato da Norbert Niederkofler, Chef 3 stelle Michelin del St. Hubertus (BZ) e stella verde per la sostenibilità, e Paolo Ferretti. Ha come missione quella di raggruppare i migliori Chef del mondo che fanno dell’approccio etico la propria filosofia di cucina, e diffondere così un messaggio di sostenibilità e attenzione per l’ambiente che ci circonda.</p>
+                <p><strong> Acadèmia</strong> supporta il <strong> CARE’s </strong>Young ethical <strong> Chef Award</strong> <strong> by Monograno Felicetti </strong>, il nuovo premio istituito da Acadèmia e CARE’s - The ethical Chef Days. L’ evento è stato creato da <strong> Norbert Niederkofler</strong>, Chef 3 stelle Michelin del St. Hubertus (BZ) e stella verde per la sostenibilità, e <strong> Paolo Ferretti</strong>. Ha come missione quella di raggruppare i migliori Chef del mondo che fanno dell’<strong>approccio etico</strong> la propria filosofia di cucina, e diffondere così un messaggio di <strong> sostenibilità</strong> e attenzione per <strong> l’ambiente </strong> che ci circonda.</p>
                 </div>
             </div>
         </div>
@@ -126,9 +126,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="container">
 <div class="row justify-content-md-center">
     <div class="info col-md-7 text-center">
-    <p>Il concorso sarà valido fino al 01.09.2021. Il vincitore verrà contattato entro 
-                l'08.09.2021 e proclamato ufficialmente vincitore proprio durante la 
-                manifestazione che si terrà a Brunico dal 24/09 al 03/10 2021.</p>
+    <p>Il concorso sarà valido fino al <strong> 01.09.2021</strong>. Il vincitore verrà contattato entro 
+                l'<strong>08.09.2021</strong> e proclamato ufficialmente vincitore proprio durante la 
+               <strong> manifestazione </strong> che si terrà a Brunico dal <strong> 24/09 </strong> al <strong> 03/10  2021. </strong></p>
                 <?php 
 
 
@@ -195,7 +195,7 @@ if (isset($_POST['submit'])) {
             </div>
             <div class="col-md-6">
                <p class="text">Registra un video (max 60 sec) in cui racconti: <br>
-                1) In 30 sec, cosa è per te la sostenibilità e come questa fa parte della tua filosofia di cucina/vita tutti i giorni. <br> 
+                1) <strong> In 30 sec, cosa è per te la sostenibilità e come questa fa parte della tua filosofia di cucina/vita tutti i giorni.</strong> <br> 
                 2) Nei restanti 30sec. racconta l’idea e gli ingredienti dietro il tuo piatto</p>
             </div>
             <div class="col-md-2"></div>
@@ -211,9 +211,9 @@ if (isset($_POST['submit'])) {
             <div class="col-md-6">
                <p class="text">Crea una cartella sul tuo computer e rinominala NOME_COGNOME_ETà_città.<br>
                               Inserisci all'interno:<br>
-                              - una tua foto professionale (dim max 5mb)<br>
-                              - la foto del piatto da te creato nel video<br>
-                              - il video da te creato (dim max 100mb)</p>
+                              - una <strong> tua foto </strong> professionale (dim max 5mb)<br>
+                              - la <strong> foto del piatto </strong> da te creato nel video<br>
+                              - il <strong> video </strong> da te creato (dim max 100mb)</p>
             </div>
             <div class="col-md-2"></div>
         </div>
@@ -378,9 +378,9 @@ if (isset($_POST['submit'])) {
 
         <div id="button" onclick="$('#myInput').click();$('#button').remove();$('.submit-hide').css('display', 'none');$('.submit-show').css('display', 'block');"><button id="_form_9_submit" class="_submit submit-hide" type="submit" >
             Seleziona File
-        </button></div>
+        </button></div>        <img class="upload" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
         <button id="_form_9_submit" onclick="$('#uploadfile').click();" class="_submit submit-show" name="submit" type="submit" style="display: none;">
-            Carica File
+         Carica File
         </button>
       </div>
       <div class="_clear-element">
@@ -738,7 +738,7 @@ window._load_script = function(url, callback) {
     </div>
     <div class="row">
        <div class="col-md-12 text-center">
-          <img class="upload" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
+          <!-- <img class="upload" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt=""> -->
        </div>
     </div>
     <div class="row">
@@ -872,7 +872,7 @@ window._load_script = function(url, callback) {
             </div>
             <div class="col-md-3"></div>
             <div class="center">
-                <a href="#" class="button">Convidi</a>
+                <a href="#" class="button">Condividi</a>
             </div>
         </div>
         <div class="row justify-content-md-center">

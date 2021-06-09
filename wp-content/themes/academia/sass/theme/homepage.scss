@@ -17,6 +17,10 @@ body,html {
 
     .banner-image {
         height: 448px;
+
+        @include media-breakpoint-down (sm) {
+            margin-bottom: 50px;
+          }
         
 
         .shade {
@@ -33,7 +37,7 @@ body,html {
             @include media-breakpoint-down (sm) {
                 font-size: 36px;
                 margin: 0 30px 0 30px;
-                padding-top: 100px;
+                padding-top: 50px;
               }
         }
 
@@ -55,7 +59,7 @@ body,html {
         h2 {
             color: $white;
             font-size: 36px;
-        
+            font-weight: bold;
         }
 
         .text {
@@ -90,7 +94,7 @@ body,html {
 
 
         .date {
-            color: $gray;
+            color: $gray2;
             font-size: 16px;
             margin-top: 16px;
         }
@@ -147,6 +151,7 @@ body,html {
             color: $white;
             text-align: center;
             font-size: 34px;
+            font-weight: bold;
         }
     }
 
@@ -164,6 +169,7 @@ body,html {
             color: $white;
             font-size: 24px;
             margin-top: 36px;
+            font-weight: bold;
         }
 
 
@@ -210,7 +216,7 @@ body,html {
         width: 58px;
         color: $white;
         padding: 13px 0px 0px 21.5px;
-        border: $gray 1px solid;
+        border: $gray2 2px solid;
         border-radius: 100%;
         font-size: 20px;
         font-weight: bolder;
@@ -378,21 +384,18 @@ body,html {
         ._submit {
             background-color: $primary !important;
             position: relative !important;
+            top: 120px !important;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             width: 257px !important;
             padding-left: 30px !important;
             font-size: 24px !important;
             font-weight: bold !important;
-            top: 100px !important;
-            left: 22% !important;
             z-index: 10;
 
 
 
-            @include media-breakpoint-down (sm) {
-                position: relative !important;
-                left: 0px !important;
-                top: 151px !important;
-            }
 
             
 
@@ -428,14 +431,13 @@ body,html {
 
 .upload {
     position: relative;
-    top: -55px;
-    left: -90px;
-    z-index: 11;
+    top: 75px !important;
+    left: -95px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 15;
 
-    @include media-breakpoint-down (sm) {
-        position: relative;
-        top: -45px !important;
-    }
 }
 
 .center-div {
