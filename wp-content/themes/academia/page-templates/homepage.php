@@ -31,10 +31,9 @@ if (($_FILES['my_file']['name']!="")){
   if (file_exists($path_filename_ext)) {
 
    }else if(!in_array($file_type, $allowed)) {
-
+      echo "not allowed";
     }else if ($file_size > $maxsize || $file_size == 0){      
         $message = 'File too large. File must be less than 2 megabytes.'; 
-        echo '<script type="text/javascript">alert("'.$message.'");</script>'; 
     }else{
    move_uploaded_file($temp_name,$path_filename_ext);
    }
