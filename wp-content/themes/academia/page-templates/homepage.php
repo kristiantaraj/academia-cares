@@ -376,7 +376,7 @@ if (isset($_POST['submit'])) {
 
       <div class="_button-wrapper _full_width">
 
-        <div id="button" onclick="$('#myInput').click();$('#button').remove();$('.submit-hide').css('display', 'none');$('.submit-show').css('display', 'block');"><button id="_form_9_submit" class="_submit submit-hide" type="submit" >
+        <div id="button" onclick="$('#myInput').click();$('#button').remove();$('.submit-hide').css('display', 'none');$('.submit-show').css('display', 'block');$('.upload').addClass('hide');$('.upload2').removeClass('hide');"><button id="_form_9_submit" class="_submit submit-hide" type="submit" >
             Seleziona File
         </button></div>        
         <img class="upload" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
