@@ -20,7 +20,7 @@ $( document ).ready(function() {
         if(!$(this).val()){
             $('.details-no').addClass('hide');
             $('.details-yes').removeClass('hide');
-            $('#errors').addClass('hide');
+            $('#errors').removeClass('hide');
 
         } else{
             $('#errors').addClass('hide');
