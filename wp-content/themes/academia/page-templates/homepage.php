@@ -98,7 +98,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             <h2>Partecipa al concorso!</h2>
         <p class="text">Sei uno chef under 30 che ha a cuore la sostenibilità? <br> Carica il tuo video e diventa il nuovo <span class="bold"> Young CARE’s Chef's 2021!</span></p>
         <div class="center">
-            <a href="#" class="button">Partecipa ora!</a>
+            <a href="#list" class="button">Partecipa ora!</a>
         </div>
         <p class="date">concorso valido dal 05/06/2021 <br> fino al 01/09/2021</p>
             </div>
@@ -111,7 +111,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="container">
         <div class="row">
             <div class="col-md-7">
-                <div class="video"><iframe width="424" height="238" src="https://www.youtube.com/embed/n-xbUI2zL74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/nNcKNTG2dbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             </div>
             <div class="col-md-5">
                 <div class="content">
@@ -378,8 +378,10 @@ if (isset($_POST['submit'])) {
 
         <div id="button" onclick="$('#myInput').click();$('#button').remove();$('.submit-hide').css('display', 'none');$('.submit-show').css('display', 'block');"><button id="_form_9_submit" class="_submit submit-hide" type="submit" >
             Seleziona File
-        </button></div>        <img class="upload" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
-        <button id="_form_9_submit" onclick="$('#uploadfile').click();" class="_submit submit-show" name="submit" type="submit" style="display: none;">
+        </button></div>        
+        <img class="upload" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
+        <img class="upload2 hide" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
+        <button id="_form_9_submit" onclick="$('#uploadfile').click();" class="_submit carica-submit submit-show" name="submit" type="submit" style="display: none;">
          Carica File
         </button>
       </div>
