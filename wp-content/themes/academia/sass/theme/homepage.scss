@@ -331,6 +331,21 @@ body,html {
 }
 }
 
+.checkbox-style {
+    position: absolute;
+    top: 320px;
+    width: 28px;
+    height: 28px;
+    outline: none;
+    border-radius: 30%;
+    z-index: 123;
+
+    @include media-breakpoint-down (sm) {
+        width: 38px !important;
+      }
+
+}
+
 #form {
     margin-top: 131px;
 
@@ -350,17 +365,7 @@ body,html {
         margin-left: 10px;
         top: -70px;
         z-index: 30;
-        .checkbox-style {
-            width: 28px;
-            height: 28px;
-            outline: none;
-            border-radius: 30%;
 
-            @include media-breakpoint-down (sm) {
-                width: 38px !important;
-              }
-    
-        }
         
         p {
             font-size: 12px;
@@ -434,11 +439,7 @@ body,html {
         input {
             border-radius: 12px !important;
             height: 53px !important;
-            width: 444px !important;
 
-            @include media-breakpoint-down (sm) {
-                width: 100% !important;
-              }
         }
 
 
@@ -508,5 +509,9 @@ body,html {
 
 .hide {
     display: none;
+}
+
+.bg-gray {
+    background-color: $gray !important;
 }
 

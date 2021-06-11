@@ -22,7 +22,7 @@ if (($_FILES['my_file']['name']!="")){
       $path_filename_ext = $target_dir.$filename.".".$ext;
       $file_size = $_FILES['my_file']['size'];
       $file_type = $_FILES['my_file']['type'];
-      $maxsize = 157286400;
+      $maxsize = 104857600;
 
     $allowed = array("application/x-zip-compressed", "application/octet-stream");
 
@@ -35,9 +35,10 @@ if (($_FILES['my_file']['name']!="")){
     }else if ($file_size > $maxsize || $file_size == 0){      
         echo '<script type="text/javascript">
         
+        $(".over-error").removeClass("hide");
         $(".tooLarge-yes").addClass("hide");
         $(".tooLarge-no").removeClass("hide");
-
+        
         
         </script>'; 
     }else{
@@ -362,7 +363,7 @@ if (isset($_POST['submit'])) {
           Email*
         </label>
         <div class="_field-wrapper">
-          <input type="text" id="email" name="email" placeholder="" required/>
+          <input class="email" type="text" id="email" name="email" placeholder="" required/>
         </div>
       </div>
       <div class="_form_element _x33123900 _full_width " >
@@ -370,13 +371,13 @@ if (isset($_POST['submit'])) {
           Numero di cellulare
         </label>
         <div class="_field-wrapper">
-          <input type="text" id="phone" name="phone" placeholder="" />
+          <input class="phone" type="text" id="phone" name="phone" placeholder="" />
         </div>
       </div>
-
+      <input id="checkbox" type="checkbox" class="checkbox-style" required>
       <div class="_button-wrapper _full_width">
 
-        <div id="button" onclick="$('#myInput').click();$('#button').remove();$('.submit-hide').css('display', 'none');$('.submit-show').css('display', 'block');$('.upload').addClass('hide');$('.upload2').removeClass('hide');"><button id="_form_9_submit" class="_submit submit-hide" type="submit" >
+        <div id="button" onclick=""><button id="_form_9_submit" class="_submit submit-hide" type="submit" >
             Seleziona File
         </button></div>        
         <img class="upload" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
@@ -731,7 +732,7 @@ window._load_script = function(url, callback) {
         <div class="col-md-12 d-flex justify-content-center">
             <div class="checkbox">
                 <div class="row">
-                    <div class="col-2"><input id="checkbox" type="checkbox" class="checkbox-style"></div>
+                    <div class="col-2"></div>
                     <div class="col-10"><p>Informativa trattamento dei dati personali Ai sensi dell'art. 6 del Reg. 
                 EU/2016/679 esprimo il consenso al trattamento dei dati conferiti</p></div>
                 </div>
@@ -745,17 +746,17 @@ window._load_script = function(url, callback) {
     </div>
     <div class="row">
         <div class="format-text col-md-12 text-center">
-            <p>(formato .zip o .rar, dim. max 150mb) </p>
+            <p>(formato .zip o .rar, dim. max 100mb) </p>
         </div>
     </div>
   </div>
 </section>
-<section id="errors" class="hide">
+<section id="errors" >
    <div class="container justify-content-center">
-   <div class="row">
+   <div class="row ">
         <div class="col-md-8"></div>
         <div class="col-md-4">
-            <div class="graybox">
+            <div id="checkbox-error2" class="graybox checkbox-error hide">
                 <div class="row">
                     <div class="image-col col-2">
                         <img class="cross checkbox-no" src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
@@ -770,7 +771,7 @@ window._load_script = function(url, callback) {
     </div>
     <div class="row">
         <div class="col-md-4">
-                <div class="graybox details">
+                <div id="info-error2" class="graybox info-error hide">
                     <div class="row">
                         <div class="image-col col-2">
                             <img class="cross details-yes " src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
@@ -784,11 +785,11 @@ window._load_script = function(url, callback) {
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="graybox details">
+                <div class="graybox upload-error hide">
                     <div class="row">
                         <div class="image-col col-2">
-                            <img class="cross correct-yes" src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
-                            <img class="check hide correct-yes" src="<?php echo get_template_directory_uri().'/assets/check.png'; ?>" alt="">
+                            <img class="cross correct-no" src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
+                            <img class="check correct-yes hide" src="<?php echo get_template_directory_uri().'/assets/check.png'; ?>" alt="">
                         </div>
                         <div class="col-10">
                         <p>Hai caricato correttamente i tuoi file! Sarai contattato al più presto dal nostro team!</p>
@@ -797,14 +798,14 @@ window._load_script = function(url, callback) {
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="graybox details">
+                <div class="graybox over-error hide">
                     <div class="row">
                         <div class="image-col col-2">
                             <img class="cross tooLarge-yes" src="<?php echo get_template_directory_uri().'/assets/cross.png'; ?>" alt="">
                             <img class="check tooLarge-no hide" src="<?php echo get_template_directory_uri().'/assets/check.png'; ?>" alt="">
                         </div>
                         <div class="col-10">
-                        <p>La cartella che vuoi caricare supera i 150 mb. Prova a ridurre la dimensione!</p>
+                        <p>La cartella che vuoi caricare supera i 100 mb. Prova a ridurre la dimensione!</p>
                         </div>
                     </div>
                 </div>
@@ -824,9 +825,9 @@ window._load_script = function(url, callback) {
           <div class="col-md-6">
               <p>La prima piattaforma italiana di e-learning dedicata interamente al mondo della cucina. Lasciati guidare da maestri del calibro di Iginio Massari o Norbert Niederkofler, frequenta i loro corsi dove e quando vuoi, supera i test e ricevi il certificato firmato dal maestro stesso.</p>
               <nav class="links">
-                  <a href="#"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
-                  <a href="#"><img src="<?php echo get_template_directory_uri().'/assets/insta.png'; ?>" alt=""></a>
-                  <a href="#"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
+                  <a href="https://academia.chefincamicia.com/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
+                  <a href="https://www.instagram.com/academia.chefincamicia/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/insta.png'; ?>" alt=""></a>
+                  <a href="https://www.facebook.com/academia.chefincamicia/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
               </nav>
           </div>
           <div class="col-md-1"></div>
@@ -840,9 +841,9 @@ window._load_script = function(url, callback) {
           <div class="col-md-6">
               <p>Un progetto ideato da uno chef per gli chef, che riunisce aziende e professionisti enogastronomici con lo stesso obiettivo: prendersi cura dell'ambiente, delle comunità locali e del ritmo della natura, promuovendo un approccio alla cucina etico e sostenibile.</p>
               <nav class="links">
-                  <a href="#"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
-                  <a href="#"><img src="<?php echo get_template_directory_uri().'/assets/insta.png'; ?>" alt=""></a>
-                  <a href="#"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
+                  <a href="https://www.care-s.it/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
+                  <a href="https://www.instagram.com/cares_ethicalchefdays/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/insta.png'; ?>" alt=""></a>
+                  <a href="https://www.facebook.com/EthicalChefDays/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
               </nav>
           </div>
           <div class="col-md-1"></div>
@@ -856,9 +857,9 @@ window._load_script = function(url, callback) {
           <div class="col-md-6">
               <p>La linea top di gamma del Pastificio Felicetti, nata con l’obiettivo di coniugare materie prime biologiche d’eccellenza – pregiate varietà di grano, acqua di sorgente e aria delle Dolomiti – e le esigenze di tutti i professionisti del settore ristorazione o dei cultori del buon cibo, sensibili ai temi di etica ambientale.</p>
               <nav class="links">
-                  <a href="#"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
-                  <a href="#"><img src="<?php echo get_template_directory_uri().'/assets/insta.png'; ?>" alt=""></a>
-                  <a href="#"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
+                  <a href="https://www.monogranofelicetti.it/it/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
+                  <a href="https://www.instagram.com/monogranofelicetti/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/insta.png'; ?>" alt=""></a>
+                  <a href="https://www.facebook.com/PastificioFelicetti/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
               </nav>
           </div>
           <div class="col-md-1"></div>
