@@ -10,10 +10,16 @@
 // Exit if accessed directly.  
 
 error_reporting(0);
+
+
+$email = $_POST['email2'];
+$phone = $_POST['phone2'];
+
       
 if (($_FILES['my_file']['name']!="")){
   // Where the file is going to be stored
-      $target_dir = "wp-content/sdfjsfsdfewgjksdhfsdkfds/caresfile ";
+
+      $target_dir = "wp-content/sdfjsfsdfewgjksdhfsdkfds/". "" . $email . "" . $phone;
       $file = $_FILES['my_file']['name'];
       $path = pathinfo($file);
       $filename = $path['filename'];
@@ -71,8 +77,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<form name="form" method="post" enctype="multipart/form-data" style="display:none;">
+<form name="form" method="post" enctype="multipart/form-data" style="display:none;" >
 <input id="myInput" name="my_file" type="file"/>
+<input id="secondmail" type="text" name="email2">
+<input id="secondphone" type="text" name="phone2">
 <input type="submit" name="submit" id="uploadfile">
 </form>
 
@@ -344,7 +352,7 @@ if (isset($_POST['submit'])) {
 
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
-  <form method="post" action="https://chefincamicia.activehosted.com/proc.php" id="_form_9_" class="_form _form_9 _inline-form  _dark" name="form" enctype="multipart/form-data" novalidate>
+  <form method="POST" action="https://chefincamicia.activehosted.com/proc.php" id="_form_9_" class="_form _form_9 _inline-form  _dark" novalidate>
     <input type="hidden" name="u" value="9" />
     <input type="hidden" name="f" value="9" />
     <input type="hidden" name="s" />
@@ -377,12 +385,17 @@ if (isset($_POST['submit'])) {
       <input id="checkbox" type="checkbox" class="checkbox-style" required>
       <div class="_button-wrapper _full_width">
 
-        <div id="button" onclick=""><button id="_form_9_submit" class="_submit submit-hide" type="submit" >
+        <div id="button" onclick="
+          $('#secondmail').val($('.email').val());
+          $('#secondphone').val($('.phone').val());"><button class="_submit submit-hide" >
             Seleziona File
         </button></div>        
         <img class="upload" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
         <img class="upload2 hide" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
-        <button id="_form_9_submit" onclick="$('#uploadfile').click();" class="_submit carica-submit submit-show" name="submit" type="submit" style="display: none;">
+        <button id="_form_9_submit"  class="_submit carica-submit submit-show" name="submit" type="submit" style="display: none;" onclick="
+        setTimeout(function(){
+$('#uploadfile').click();
+},2000);">
          Carica File
         </button>
       </div>
@@ -715,7 +728,7 @@ window._load_script = function(url, callback) {
     if (validate_form()) {
       // use this trick to get the submit button & disable it using plain javascript
       document.querySelector('#_form_9_submit').disabled = true;
-            var serialized = _form_serialize(document.getElementById('_form_9_'));
+            var serialized = _form_serialize(document.getElementById('_form_9_')).replaceAll('%0A', '\\n');
       var err = form_to_submit.querySelector('._form_error');
       err ? err.parentNode.removeChild(err) : false;
       _load_script('https://chefincamicia.activehosted.com/proc.php?' + serialized + '&jsonp=true');
@@ -726,6 +739,7 @@ window._load_script = function(url, callback) {
 })();
 
 </script>
+
       </div>
     </div>
     <div class="row">

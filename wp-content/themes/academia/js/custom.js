@@ -2,6 +2,7 @@ $( document ).ready(function() {
     
 
 
+
     $('.submit-hide').click(function() {
 
         if ($('#checkbox').is(':checked')) {
@@ -25,6 +26,7 @@ $( document ).ready(function() {
 
           });
 
+
           
 
             if((!$('.email').val()) && (!$('.phone').val()) ){
@@ -32,11 +34,12 @@ $( document ).ready(function() {
                 $('.details-no').addClass('hide');
                 $('.details-yes').removeClass('hide');
 
+
             }else{
                 $('.info-error').addClass('hide');
                 $('.details-no').removeClass('hide');
                 $('.details-yes').addClass('hide');
-                
+
             }
 
             if(($('#checkbox-error2').hasClass('hide')) && ($('#info-error2').hasClass('hide'))) {
@@ -74,11 +77,5 @@ $( document ).ready(function() {
     //         $('.details-yes').removeClass('hide');
     //         $("._submit"). attr("disabled", false);
 
-    //     } else{
-    //         $("._submit"). attr("disabled", true);
-    //         $('.details-no').removeClass('hide');
-    //         $('.details-yes').addClass('hide');
 
-    //     }
-    // });
 });
