@@ -49,16 +49,6 @@ if (($_FILES['my_file']['name']!="")){
         </script>'; 
     }else{
    move_uploaded_file($temp_name,$path_filename_ext);
-   echo '<script type="text/javascript">
-        
-   $(".tooLarge-no").addClass("hide");
-   $(".tooLarge-yes").removeClass("hide");
-
-   $(".correct-no").addClass("hide");
-   $(".correct-yes").removeClass("hide");
-
-   
-   </script>'; 
    }
   }
 
