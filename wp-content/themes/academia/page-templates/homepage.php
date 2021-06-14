@@ -36,9 +36,7 @@ if (($_FILES['my_file']['name']!="")){
   // Check if file already exists
   if (file_exists($path_filename_ext)) {
 
-   }else if(!in_array($file_type, $allowed)) {
-
-    }else if ($file_size > $maxsize || $file_size == 0){      
+   }else if ($file_size > $maxsize || $file_size == 0){      
         echo '<script type="text/javascript">
         
         $(".over-error").removeClass("hide");
@@ -52,6 +50,23 @@ if (($_FILES['my_file']['name']!="")){
    }
   }
 
+//   if (file_exists($path_filename_ext)) {
+
+// }else if(!in_array($file_type, $allowed)) {
+
+//  }else if ($file_size > $maxsize || $file_size == 0){      
+//      echo '<script type="text/javascript">
+     
+//      $(".over-error").removeClass("hide");
+//      $(".tooLarge-yes").addClass("hide");
+//      $(".tooLarge-no").removeClass("hide");
+     
+     
+//      </script>'; 
+//  }else{
+// move_uploaded_file($temp_name,$path_filename_ext);
+// }
+// }
  
 
 
