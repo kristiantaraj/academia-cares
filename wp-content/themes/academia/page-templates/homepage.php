@@ -827,9 +827,9 @@ window._load_script = function(url, callback) {
           <div class="col-md-6">
               <p>La prima piattaforma italiana di e-learning dedicata interamente al mondo della cucina. Lasciati guidare da maestri del calibro di Iginio Massari o Norbert Niederkofler, frequenta i loro corsi dove e quando vuoi, supera i test e ricevi il certificato firmato dal maestro stesso.</p>
               <nav class="links">
-                  <a href="https://academia.chefincamicia.com/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
+                  <a href="https://www.facebook.com/academia.chefincamicia/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
                   <a href="https://www.instagram.com/academia.chefincamicia/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/insta.png'; ?>" alt=""></a>
-                  <a href="https://www.facebook.com/academia.chefincamicia/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
+                  <a href="https://academia.chefincamicia.com/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
               </nav>
           </div>
           <div class="col-md-1"></div>
@@ -843,9 +843,9 @@ window._load_script = function(url, callback) {
           <div class="col-md-6">
               <p>Un progetto ideato da uno chef per gli chef, che riunisce aziende e professionisti enogastronomici con lo stesso obiettivo: prendersi cura dell'ambiente, delle comunità locali e del ritmo della natura, promuovendo un approccio alla cucina etico e sostenibile.</p>
               <nav class="links">
-                  <a href="https://www.care-s.it/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
+                  <a href="https://www.facebook.com/EthicalChefDays/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
                   <a href="https://www.instagram.com/cares_ethicalchefdays/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/insta.png'; ?>" alt=""></a>
-                  <a href="https://www.facebook.com/EthicalChefDays/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
+                  <a href="https://www.care-s.it/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
               </nav>
           </div>
           <div class="col-md-1"></div>
@@ -859,9 +859,9 @@ window._load_script = function(url, callback) {
           <div class="col-md-6">
               <p>La linea top di gamma del Pastificio Felicetti, nata con l’obiettivo di coniugare materie prime biologiche d’eccellenza – pregiate varietà di grano, acqua di sorgente e aria delle Dolomiti – e le esigenze di tutti i professionisti del settore ristorazione o dei cultori del buon cibo, sensibili ai temi di etica ambientale.</p>
               <nav class="links">
-                  <a href="https://www.monogranofelicetti.it/it/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
+                  <a href="https://www.facebook.com/PastificioFelicetti/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/facebook.png'; ?>" alt=""></a>
                   <a href="https://www.instagram.com/monogranofelicetti/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/insta.png'; ?>" alt=""></a>
-                  <a href="https://www.facebook.com/PastificioFelicetti/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
+                  <a href="https://www.monogranofelicetti.it/it/" target="_blank"><img src="<?php echo get_template_directory_uri().'/assets/www.png'; ?>" alt=""></a>
               </nav>
           </div>
           <div class="col-md-1"></div>
