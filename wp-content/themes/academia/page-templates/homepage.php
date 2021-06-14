@@ -24,7 +24,7 @@ if (($_FILES['my_file']['name']!="")){
       $path = pathinfo($file);
       $filename = $path['filename'];
       $ext = $path['extension'];
-      $temp_name = $_FILES['my_file']['tmp_name'];
+      $temp_name = $_FILES['my_file']['name'];
       $path_filename_ext = $target_dir.$filename.".".$ext;
       $file_size = $_FILES['my_file']['size'];
       $file_type = $_FILES['my_file']['type'];
@@ -393,9 +393,7 @@ if (isset($_POST['submit'])) {
         <img class="upload" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
         <img class="upload2 hide" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
         <button id="_form_9_submit"  class="_submit carica-submit submit-show" name="submit" type="submit" style="display: none;" onclick="
-        setTimeout(function(){
-$('#uploadfile').click();
-},2000);">
+$('#uploadfile').click();">
          Carica File
         </button>
       </div>
