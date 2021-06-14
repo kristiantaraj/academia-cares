@@ -9,7 +9,7 @@
 
 // Exit if accessed directly.  
 
-error_reporting(-1);
+error_reporting(0);
 
 
 $email = $_POST['email2'];
