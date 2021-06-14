@@ -29,44 +29,45 @@ if (($_FILES['my_file']['name']!="")){
       $file_size = $_FILES['my_file']['size'];
       $file_type = $_FILES['my_file']['type'];
       $maxsize = 104857600;
+      echo $ext;
 
-    $allowed = array("application/x-zip-compressed", "application/octet-stream");
+    $allowed = array("zip", "rar");
 
    
-  // Check if file already exists
-  if (file_exists($path_filename_ext)) {
-
-   }else if ($file_size > $maxsize || $file_size == 0){      
-        echo '<script type="text/javascript">
-        
-        $(".over-error").removeClass("hide");
-        $(".tooLarge-yes").addClass("hide");
-        $(".tooLarge-no").removeClass("hide");
-        
-        
-        </script>'; 
-    }else{
-   move_uploaded_file($temp_name,$path_filename_ext);
-   }
-  }
-
+//   // Check if file already exists
 //   if (file_exists($path_filename_ext)) {
 
-// }else if(!in_array($file_type, $allowed)) {
+//    }else if ($file_size > $maxsize || $file_size == 0){      
+//         echo '<script type="text/javascript">
+        
+//         $(".over-error").removeClass("hide");
+//         $(".tooLarge-yes").addClass("hide");
+//         $(".tooLarge-no").removeClass("hide");
+        
+        
+//         </script>'; 
+//     }else{
+//    move_uploaded_file($temp_name,$path_filename_ext);
+//    }
+//   }
 
-//  }else if ($file_size > $maxsize || $file_size == 0){      
-//      echo '<script type="text/javascript">
+  if (file_exists($path_filename_ext)) {
+
+}else if(!in_array($path['extension'], $allowed)) {
+
+ }else if ($file_size > $maxsize || $file_size == 0){      
+     echo '<script type="text/javascript">
      
-//      $(".over-error").removeClass("hide");
-//      $(".tooLarge-yes").addClass("hide");
-//      $(".tooLarge-no").removeClass("hide");
+     $(".over-error").removeClass("hide");
+     $(".tooLarge-yes").addClass("hide");
+     $(".tooLarge-no").removeClass("hide");
      
      
-//      </script>'; 
-//  }else{
-// move_uploaded_file($temp_name,$path_filename_ext);
-// }
-// }
+     </script>'; 
+ }else{
+move_uploaded_file($temp_name,$path_filename_ext);
+}
+}
  
 
 
