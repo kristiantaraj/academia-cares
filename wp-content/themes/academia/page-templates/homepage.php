@@ -29,7 +29,6 @@ if (($_FILES['my_file']['name']!="")){
       $file_size = $_FILES['my_file']['size'];
       $file_type = $_FILES['my_file']['type'];
       $maxsize = 104857600;
-      echo $ext;
 
     $allowed = array("zip", "rar");
 
