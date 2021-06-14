@@ -67,12 +67,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<form name="form" method="post" enctype="multipart/form-data" style="display:none;" >
+<div style="width:0;height:0;overflow: hidden;">
+
+<form name="form" method="post" enctype="multipart/form-data">
 <input id="myInput" name="my_file" type="file"/>
 <input id="secondmail" type="text" name="email2">
 <input id="secondphone" type="text" name="phone2">
 <input type="submit" name="submit" id="uploadfile">
 </form>
+
+</div>
+
 
 
 
