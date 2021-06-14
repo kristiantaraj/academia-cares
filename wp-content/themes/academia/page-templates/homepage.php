@@ -54,10 +54,21 @@ if (($_FILES['my_file']['name']!="")){
 
 }else if(!in_array($path['extension'], $allowed)) {
 
- }else if ($file_size > $maxsize || $file_size == 0){      
-     echo '<script type="text/javascript">
+    echo '<script>
+    $( document ).ready(function() {
      
-     $(".over-error").removeClass("hide");
+    $(".over-error").removeClass("hide");
+    $(".correct-no").addClass("hide");
+    $(".correct-yes").removeClass("hide");
+
+    )};
+    
+    </script>'; 
+
+ }else if ($file_size > $maxsize || $file_size == 0){      
+     echo '<script>
+     
+     $(".upload-error").removeClass("hide");
      $(".tooLarge-yes").addClass("hide");
      $(".tooLarge-no").removeClass("hide");
      
@@ -187,12 +198,6 @@ if (isset($_POST['submit'])) {
                 <img src="<?php echo get_template_directory_uri().'/assets/third.png'; ?>" alt="">
                 <h3 class="card-title">Fornitura per 1 anno Pasta Monograno Felicetti</h3>
                 <p class="card-description">Ma non finisce qui! Riceverai una fornitura di pasta Monograno Felicetti per realizzare i tuoi piatti.</p>
-            </div>
-        </div>
-        <div class="links row">
-            <div class="col-12">
-                <p class="gray-color text-center" >Per maggiori informazioni leggi il </p>
-                <a href="#" class="d-flex justify-content-center" >regolamento</a>
             </div>
         </div>
     </div>
@@ -897,7 +902,7 @@ window._load_script = function(url, callback) {
             </div>
             <div class="col-md-3"></div>
             <div class="center">
-                <a href="#" class="button">Condividi</a>
+                <a href="#" class="button" data-toggle="modal" data-target="#modalSocial">Condividi</a>
             </div>
         </div>
         <div class="row justify-content-md-center">
@@ -908,3 +913,47 @@ window._load_script = function(url, callback) {
         </div>
     </div>
 </section>
+
+<div class="modal modal-social fade rating-hide" id="modalSocial" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Header-->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h2 class="title"> Condividi</h2>
+        <button type="button" class="close" onclick="closeLink()" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body mb-0 text-center">
+
+      <h3 class="oppure-social">Social</h3>
+      <div class="socials">
+                          
+                            <a class="social-icon-modal" href="https://www.facebook.com/sharer.php?display=page&u=<?= get_permalink(get_the_ID()); ?>" >
+                            <img src="<?= get_template_directory_uri(); ?>/assets/facebook.png">
+                          </a>   
+                          <a class="social-icon-modal" href="https://pinterest.com/pin/create/button/?url=<?= get_permalink(get_the_ID()); ?>">
+                          <img src="<?= get_template_directory_uri(); ?>/assets/pinterest.png">
+                        </a>                           
+                            <a class="social-icon-modal" href="https://wa.me/?text=<?= get_permalink(get_the_ID()); ?>" >
+                            <img src="<?= get_template_directory_uri(); ?>/assets/whatsapp.png" style="width:40px; height:40px">
+                          </a>                      
+
+                            </div>
+                        
+                        <h3 class="oppure"> Oppure copia direttamente il link</h3>
+                        <h4 id="share-link" onclick="copyLink()" class="oppure-link"> <?= get_permalink(get_the_ID()); ?></h4>
+                        <p id="target">Testo Copiato</p>
+                        </div>  
+
+    </div>
+    </div>
+    <!--/.Content-->
+
+  </div>
+</div>
