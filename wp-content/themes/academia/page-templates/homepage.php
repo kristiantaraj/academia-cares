@@ -75,7 +75,27 @@ if (($_FILES['my_file']['name']!="")){
      
      </script>'; 
  }else{
-move_uploaded_file($temp_name,$path_filename_ext);
+    echo '<script>
+    setTimeout(
+        function() 
+        {
+
+            $(".upload-error").removeClass("hide");
+            $(".correct-yes").removeClass("hide");
+            $(".correct-no").addClass("hide");
+            document.getElementById("hiddenBtn").click();
+
+            if($(".checkbox-error").hasClass("hide")){
+                $(".graybox").css("margin-top","200px");
+              }
+
+
+
+        }, 1000);
+
+    </script>'; 
+    sleep(2);
+    move_uploaded_file($temp_name,$path_filename_ext);
 }
 }
  
@@ -105,7 +125,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div>
 
 
-
+<a id="hiddenBtn" href="#form" style="position:absolute;top:-2000px">HIDEN</a>
 
 
 <section id="banner">
@@ -400,9 +420,7 @@ if (isset($_POST['submit'])) {
       <input id="checkbox" type="checkbox" class="checkbox-style" required>
       <div class="_button-wrapper _full_width">
 
-        <div id="button" onclick="
-          $('#secondmail').val($('.email').val());
-          $('#secondphone').val($('.phone').val());"><button class="_submit submit-hide" >
+        <div id="button"><button class="_submit submit-hide" >
             Seleziona File
         </button></div>        
         <img class="upload" src="<?php echo get_template_directory_uri().'/assets/upload.png'; ?>" alt="">
@@ -914,6 +932,7 @@ window._load_script = function(url, callback) {
     </div>
 </section>
 
+<!--Modal: modalSocial-->
 <div class="modal modal-social fade rating-hide" id="modalSocial" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog cascading-modal" role="document">
@@ -934,14 +953,11 @@ window._load_script = function(url, callback) {
       <h3 class="oppure-social">Social</h3>
       <div class="socials">
                           
-                            <a class="social-icon-modal" href="https://www.facebook.com/sharer.php?display=page&u=<?= get_permalink(get_the_ID()); ?>" >
-                            <img src="<?= get_template_directory_uri(); ?>/assets/facebook.png">
-                          </a>   
-                          <a class="social-icon-modal" href="https://pinterest.com/pin/create/button/?url=<?= get_permalink(get_the_ID()); ?>">
-                          <img src="<?= get_template_directory_uri(); ?>/assets/pinterest.png">
-                        </a>                           
-                            <a class="social-icon-modal" href="https://wa.me/?text=<?= get_permalink(get_the_ID()); ?>" >
-                            <img src="<?= get_template_directory_uri(); ?>/assets/whatsapp.png" style="width:40px; height:40px">
+                            <a class="social-icon-modal" href="#" >
+                            <img src="<?= get_template_directory_uri(); ?>/assets/facebook2.png">
+                          </a>                      
+                            <a class="social-icon-modal" href="#" >
+                            <img src="<?= get_template_directory_uri(); ?>/assets/linkedin.png" style="width:40px; height:40px">
                           </a>                      
 
                             </div>
@@ -957,3 +973,5 @@ window._load_script = function(url, callback) {
 
   </div>
 </div>
+
+<script>

@@ -1,5 +1,21 @@
 $( document ).ready(function() {
+
+
+    $("#myInput").change(function (){
+
+        if((this.files[0].size) >= 104857600) {
+            $(".over-error").removeClass("hide");
+            $(".correct-no").addClass("hide");
+            $(".correct-yes").removeClass("hide");
+            $('.submit-hide').css('display', 'block');
+            $('.submit-show').css('display', 'none');
+            $('.upload').removeClass('hide');
+            $('.upload2').addClass('hide');
+        }
+      });
     
+
+
 
 
 
@@ -27,6 +43,10 @@ $( document ).ready(function() {
           });
 
 
+          if($('.checkbox-error').hasClass('hide')){
+            $('.graybox').css('margin-top','200px');
+          }
+
           
 
             if((!$('.email').val()) && (!$('.phone').val()) ){
@@ -44,7 +64,6 @@ $( document ).ready(function() {
 
             if(($('#checkbox-error2').hasClass('hide')) && ($('#info-error2').hasClass('hide'))) {
                 $('#myInput').click();
-                $('#button').remove();
                 $('.submit-hide').css('display', 'none');
                 $('.submit-show').css('display', 'block');
                 $('.upload').addClass('hide');
@@ -79,3 +98,4 @@ $( document ).ready(function() {
 
 
 });
+

@@ -47,7 +47,36 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <script>
 
+    //Copy Link Function
 
+/* Get the text field */
+var copyText = document.getElementById("share-link");
+var copyAfterText = document.getElementById("target");
+
+function closeLink(){
+  copyAfterText.classList.remove('showCopyText');
+}
+
+
+function copyLink() {
+  /* Copy the text inside the text field */
+  copyAfterText.classList.add('showCopyText');
+  document.execCommand("copy");
+  
+}
+
+copyText.addEventListener("copy", function(event) {
+
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", copyText.textContent);
+    console.log(event.clipboardData.getData("text"));
+  }
+});
+
+});
+
+</script>
 </script>
 </body>
 
