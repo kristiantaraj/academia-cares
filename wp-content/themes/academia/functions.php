@@ -33,4 +33,4 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
-wp_enqueue_script( 'script', get_template_directory_uri() . '/js/custom.js', 1.1, true);
+wp_enqueue_script( 'script', get_template_directory_uri() . '/js/custom2.js', 1.1, true);
