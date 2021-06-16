@@ -207,7 +207,7 @@ if (isset($_POST['submit'])) {
             <div class="col-sm">
                 <img src="<?php echo get_template_directory_uri().'/assets/first.png'; ?>" alt="">
                 <h3 class="card-title">Ospite all'evento CARE’s - The ethical Chef Days 2021</h3>
-                <p class="card-description">Ospite all'evento a Brunico (BZ) per 2 giorni con pernottamento incluso. Parteciperai a tutte le attività programmate, inclusa la cena al ristorante "AlpiNN - Food Space & Restaurant” dove chef stellati daranno vita ad un’esperienza unica.</p>
+                <p class="card-description">Ospite all'evento a Brunico (BZ) per 2 giorni con pernottamento incluso. Parteciperai a tutte le attività programmate, inclusa la cena al ristorante "AlpiNN - Food Space & Restaurant” dove chef internazionali daranno vita ad un’esperienza unica.</p>
             </div>
             <div class="col-sm">
                 <img src="<?php echo get_template_directory_uri().'/assets/second.png'; ?>" alt="">
