@@ -953,7 +953,7 @@ window._load_script = function(url, callback) {
       <h3 class="oppure-social">Social</h3>
       <div class="socials">
                           
-                            <a class="social-icon-modal" href="#" >
+                            <a class="social-icon-modal" href="https://www.facebook.com/sharer/sharer.php?u=#url" >
                             <img src="<?= get_template_directory_uri(); ?>/assets/facebook2.png">
                           </a>                      
                             <a class="social-icon-modal" href="#" >
