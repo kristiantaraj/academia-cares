@@ -771,7 +771,7 @@ window._load_script = function(url, callback) {
 
 </script>
 
-      </div>
+<!--       </div>
     </div>
     <div class="row">
         <div class="col-md-12 d-flex justify-content-center">
@@ -795,7 +795,7 @@ window._load_script = function(url, callback) {
         </div>
     </div>
   </div>
-</section>
+</section> -->
 <section id="errors" >
    <div class="container justify-content-center">
    <div class="row ">
