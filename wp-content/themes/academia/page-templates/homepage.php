@@ -387,7 +387,7 @@ if (isset($_POST['submit'])) {
 
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
-  <form method="POST" action="https://chefincamicia.activehosted.com/proc.php" id="_form_9_" class="_form _form_9 _inline-form  _dark" novalidate>
+<!--   <form method="POST" action="https://chefincamicia.activehosted.com/proc.php" id="_form_9_" class="_form _form_9 _inline-form  _dark" novalidate>
     <input type="hidden" name="u" value="9" />
     <input type="hidden" name="f" value="9" />
     <input type="hidden" name="s" />
@@ -445,7 +445,7 @@ $('#uploadfile').click();">
         </span>
       </a>
     </div>
-  </form><script type="text/javascript">
+  </form><script type="text/javascript"> -->
 window.cfields = [];
 window._show_thank_you = function(id, message, trackcmp_url, email) {
   var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
