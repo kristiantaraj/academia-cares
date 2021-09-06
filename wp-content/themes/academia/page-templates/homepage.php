@@ -294,9 +294,9 @@ if (isset($_POST['submit'])) {
 <section id="form">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+<!--       <div class="col-md-12">
           <h3 class="text-center text-white">Inserisci</h3>
-      </div>
+      </div> -->
       <div class="form-style col-md-12">
       <style>
  #_form_9_ { font-size:14px; line-height:1.6; font-family:arial, helvetica, sans-serif; margin:0; }
@@ -790,9 +790,9 @@ window._load_script = function(url, callback) {
        </div>
     </div>
     <div class="row">
-        <div class="format-text col-md-12 text-center">
+<!--         <div class="format-text col-md-12 text-center">
             <p>(formato .zip o .rar, dim. max 100mb) </p>
-        </div>
+        </div> -->
     </div>
   </div>
 </section> -->
